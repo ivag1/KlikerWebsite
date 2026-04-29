@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>My Website</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index1.css">
 </head>
 <body>
 
@@ -15,12 +15,93 @@
 <div class="hero">
     <h1>Welcome to my website</h1>
     <p>This is my first website</p>
-    <img src="">
 </div>
 
-<div class="flex-container">
-    <div class="box">Box 1</div>
-    <div class="box">Box 2</div>
-    <div class="box">Box 3</div>
+<div class="section">
+    <h2>Flexbox Examples</h2>
+    <p>Flexbox is a CSS layout tool that arranges items in a row or column. Changing just one property can completely change how things look. Explore the examples below to see each one in action.</p>
 </div>
 
+<!-- DEMO 1: The default -->
+<div class="demo-block">
+    <h2>display: flex + justify-content: center</h2>
+    <p>Adding <code>display: flex</code> to a container turns it into a flexbox. Items automatically line up side by side. <code>justify-content: center</code> moves them to the middle of the row.</p>
+    <div class="flex-demo jc-center">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+</div>
+
+<!-- DEMO 2: Column direction -->
+<div class="demo-block">
+    <h2>flex-direction: column</h2>
+    <p>The default direction is <code>row</code> (left to right). Change it to <code>column</code> and items stack <em>top to bottom</em> instead. Great for things like sidebars or vertical menus.</p>
+    <div class="flex-demo flex-col">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+</div>
+
+<!-- DEMO 3: space-between -->
+<div class="demo-block">
+    <h2>justify-content: space-between</h2>
+    <p>Pushes items as far apart as possible. The first item goes to the left edge, the last item goes to the right edge, and any remaining items are evenly distributed in between.</p>
+    <div class="flex-demo jc-between">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+</div>
+
+<!-- DEMO 4: space-around -->
+<div class="demo-block">
+    <h2>justify-content: space-around</h2>
+    <p>Similar to <code>space-between</code>, but every item also gets equal space on both its left and right sides. This means the gap at the edges is half the gap between items.</p>
+    <div class="flex-demo jc-around">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+</div>
+
+<!-- DEMO 5: align-items -->
+<div class="demo-block">
+    <h2>align-items: center</h2>
+    <p><code>justify-content</code> controls alignment on the main axis (horizontal). <code>align-items</code> controls the <em>cross axis</em> (vertical). Setting it to <code>center</code> vertically centers all items — notice the short and tall boxes line up in the middle.</p>
+    <div class="flex-demo jc-center ai-center">
+        <div class="box">Short</div>
+        <div class="box box-tall">Tall Box</div>
+        <div class="box">Short</div>
+    </div>
+</div>
+
+<!-- DEMO 6: flex-wrap -->
+<div class="demo-block">
+    <h2>flex-wrap: wrap</h2>
+    <p>By default, flexbox squishes all items into one row. Add <code>flex-wrap: wrap</code> and any items that don't fit automatically jump to the next line — like text wrapping in a paragraph.</p>
+    <div class="flex-demo jc-center wrap-on">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+        <div class="box">Box 6</div>
+        <div class="box">Box 7</div>
+    </div>
+</div>
+
+<!-- DEMO 7: flex-grow -->
+<div class="demo-block">
+    <h2>flex-grow</h2>
+    <p><code>flex-grow</code> controls how much a flex item expands to fill leftover space. Box 1 and Box 3 have <code>flex-grow: 1</code>. Box 2 has <code>flex-grow: 2</code> — so it grabs <em>twice</em> as much of the extra space.</p>
+    <div class="flex-demo ai-center">
+        <div class="box box-grow-1">Box 1 (grow: 1)</div>
+        <div class="box box-grow-2">Box 2 (grow: 2)</div>
+        <div class="box box-grow-1">Box 3 (grow: 1)</div>
+    </div>
+</div>
+
+</body>
+</html>

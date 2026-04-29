@@ -5,6 +5,7 @@ body {
     color: #222;
 }
 
+/* --- Navigation --- */
 .nav {
     background-color: #4a69bd;
     padding: 15px 20px;
@@ -16,37 +17,247 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
+    margin: 0 15px;
 }
 
 .nav a:hover {
     text-decoration: underline;
 }
 
+/* --- Hero (home page banner) --- */
 .hero {
     background-color: white;
     width: 80%;
     margin: 25px auto;
     border-radius: 15px;
     text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
-.hero .h1 {
-   font-weight: bold;
-   color:#4a69bd;
+.hero h1 {
+    font-weight: bold;
+    color: #4a69bd;
+    margin-top: 0;
 }
 
+/* --- Section (about & contact pages) --- */
+.section {
+    background-color: white;
+    width: 80%;
+    margin: 25px auto;
+    border-radius: 15px;
+    padding: 30px 40px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.section h1,
+.section h2 {
+    color: #4a69bd;
+    margin-top: 0;
+}
+
+/* --- Shared box style --- */
+.box {
+    background-color: #4a69bd;
+    color: white;
+    padding: 18px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 6px;
+}
+
+/* --- Original flex container --- */
 .flex-container {
     display: flex;
     justify-content: center;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
+/* --- Flexbox demo blocks --- */
+.demo-block {
+    background-color: white;
+    width: 80%;
+    margin: 25px auto;
+    border-radius: 15px;
+    padding: 25px 35px;
+    box-sizing: border-box;
+}
 
+.demo-block h2 {
+    color: #4a69bd;
+    font-family: monospace;
+    font-size: 19px;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
 
+.demo-block p {
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
 
+.flex-demo {
+    display: flex;
+    background-color: #eef1fb;
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 80px;
+}
 
+code {
+    background-color: #e8ecf7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 14px;
+    color: #4a69bd;
+}
 
+/* justify-content helpers */
+.jc-center  { justify-content: center; }
+.jc-start   { justify-content: flex-start; }
+.jc-end     { justify-content: flex-end; }
+.jc-between { justify-content: space-between; }
+.jc-around  { justify-content: space-around; }
 
-button:hover {
+/* flex-direction */
+.flex-col   { flex-direction: column; align-items: flex-start; }
+
+/* align-items */
+.ai-center  { align-items: center; min-height: 130px; }
+
+/* flex-wrap */
+.wrap-on    { flex-wrap: wrap; }
+
+/* Tall box variant for align-items demo */
+.box-tall {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* flex-grow */
+.box-grow-1 { flex-grow: 1; }
+.box-grow-2 { flex-grow: 2; }
+
+/* --- Team cards (about page) --- */
+.card-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.card {
+    background-color: #f4f7fb;
+    border-radius: 12px;
+    padding: 20px 25px;
+    width: 190px;
+    text-align: center;
+}
+
+.card h3 {
+    color: #4a69bd;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+/* --- Contact form --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 4px;
+    display: block;
+    font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #cdd4e8;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    color: #222;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #4a69bd;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #4a69bd;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
     background-color: #3b55a0;
+}
+
+/* --- Contact info cards --- */
+.info-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.info-card {
+    background-color: #f4f7fb;
+    border-radius: 12px;
+    padding: 20px 25px;
+    min-width: 150px;
+    text-align: center;
+}
+
+.info-card h3 {
+    color: #4a69bd;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    color: #555;
+    font-size: 14px;
+    margin: 0;
 }
