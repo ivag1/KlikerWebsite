@@ -7,14 +7,14 @@
 <body>
 
 <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="about-us.html">About</a>
-    <a href="contact-us.html">Contact</a>
+    <a href="index.html">Дома</a>
+    <a href="about-us.html">За нас</a>
+    <a href="contact-us.html">Контакт</a>
 </div>
 
 <div class="hero">
-    <h1>Welcome to my website</h1>
-    <p>This is my first website</p>
+    <h1>Го градиме дигиталниот свет</h1>
+    <p>Веб-програмирање со <strong>Кликер ИТ Центар</strong> - Скопје</p>
 </div>
 
 <div class="section">
@@ -22,10 +22,9 @@
     <p>Flexbox е CSS алатка за распоред која ги подредува елементите во ред или колона. Промената на само едно својство може целосно да го промени изгледот. Истражи ги примерите подолу за да видиш секој во акција.</p>
 </div>
 
-<!-- DEMO 1: The default -->
 <div class="demo-block">
     <h2>display: flex + justify-content: center</h2>
-    <p>Додавањето на <code>display: flex</code> на контејнер го претвора во flexbox. Елементите автоматски се наредуваат еден до друг. <code>justify-content: center</code> ги поместува во средината на редот.</p>
+    <p>Додавањето на <code>display: flex</code> на container елемент го претвора во flexbox. Елементите автоматски се редат еден до друг. <code>justify-content: center</code> ги поместува во средината на редот.</p>
     <div class="flex-demo jc-center">
         <div class="box">Box 1</div>
         <div class="box">Box 2</div>
@@ -33,10 +32,10 @@
     </div>
 </div>
 
-<!-- DEMO 2: Column direction -->
+
 <div class="demo-block">
     <h2>flex-direction: column</h2>
-    <p>Стандардната насока е <code>row</code> (лево кон десно). Промени ја на <code>column</code> и елементите се наредуваат <em>одозгора надолу</em>. Одлично за работи како странични ленти или вертикални менија.</p>
+    <p>Default насока е <code>row</code> (лево кон десно). Промени ја на <code>column</code> и ќе се наредат<em>одозгора надолу</em>. Може да се искористи за side bars или вертикални менија.</p>
     <div class="flex-demo flex-col">
         <div class="box">Box 1</div>
         <div class="box">Box 2</div>
@@ -44,7 +43,6 @@
     </div>
 </div>
 
-<!-- DEMO 3: space-between -->
 <div class="demo-block">
     <h2>justify-content: space-between</h2>
     <p>Ги турка елементите колку што е можно подалеку еден од друг. Првиот елемент оди на левиот раб, последниот на десниот раб, а останатите се рамномерно распоредени помеѓу нив.</p>
@@ -55,7 +53,6 @@
     </div>
 </div>
 
-<!-- DEMO 4: space-around -->
 <div class="demo-block">
     <h2>justify-content: space-around</h2>
     <p>Слично на <code>space-between</code>, но секој елемент добива еднакво растојание и на левата и на десната страна. Тоа значи дека просторот на рабовите е половина од просторот помеѓу елементите.</p>
@@ -66,10 +63,9 @@
     </div>
 </div>
 
-<!-- DEMO 5: align-items -->
 <div class="demo-block">
     <h2>align-items: center</h2>
-    <p><code>justify-content</code> го контролира порамнувањето на главната оска (хоризонтална). <code>align-items</code> ја контролира <em>попречната оска</em> (вертикална). Поставувањето на <code>center</code> ги центрира сите елементи вертикално — забележи како кратките и високите кутии се порамнуваат во средината.</p>
+    <p><code>justify-content</code> го контролира порамнувањето на хоризонталната оска. <code>align-items</code> ја контролира <em>попречната оска</em> (вертикална). Поставувањето на <code>center</code> ги центрира сите елементи вертикално — забележи како кратките и високите кутии се порамнуваат во средината.</p>
     <div class="flex-demo jc-center ai-center">
         <div class="box">Short</div>
         <div class="box box-tall">Tall Box</div>
@@ -77,10 +73,9 @@
     </div>
 </div>
 
-<!-- DEMO 6: flex-wrap -->
 <div class="demo-block">
     <h2>flex-wrap: wrap</h2>
-    <p>Стандардно, flexbox ги собира сите елементи во еден ред. Додај <code>flex-wrap: wrap</code> и елементите кои не се вклопуваат автоматски преминуваат на следниот ред — исто како преминување на текст во параграф.</p>
+    <p>Flexbox ги собира сите елементи во еден ред. Додај <code>flex-wrap: wrap</code> и елементите кои не се вклопуваат автоматски преминуваат на следниот ред.</p>
     <div class="flex-demo jc-center wrap-on">
         <div class="box">Box 1</div>
         <div class="box">Box 2</div>
@@ -92,10 +87,9 @@
     </div>
 </div>
 
-<!-- DEMO 7: flex-grow -->
 <div class="demo-block">
     <h2>flex-grow</h2>
-    <p><code>flex-grow</code> контролира колку еден flex елемент се проширува за да го пополни слободниот простор. Кутија 1 и Кутија 3 имаат <code>flex-grow: 1</code>. Кутија 2 има <code>flex-grow: 2</code> — така таа зазема <em>двапати</em> повеќе од слободниот простор.</p>
+    <p><code>flex-grow</code> контролира колку еден flex елемент се проширува за да го пополни слободниот простор. Box 1 и 3 имаат <code>flex-grow: 1</code>. Box 2 има <code>flex-grow: 2</code> — така таа зазема <em>двапати</em> повеќе од слободниот простор.</p>
     <div class="flex-demo ai-center">
         <div class="box box-grow-1">Box 1 (grow: 1)</div>
         <div class="box box-grow-2">Box 2 (grow: 2)</div>
